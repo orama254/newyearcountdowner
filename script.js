@@ -20,3 +20,7 @@ document .getElementById('minute').innerText = m;
 document.getElementById('second').innerText = s;
 }
 
+setInterval(function(){
+    newYear();
+},1000);
+

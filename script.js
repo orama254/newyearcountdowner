@@ -1,26 +1,26 @@
 const countDate = new Date('jan 1, 2021 00:00:00').getTime();
 
-function newYear(){
-const now = new Date().getTime();
+const newYear = ()=>{
+var now = new Date().getTime();
 gap = countDate - now;
 
-const second = 1000;
-const minute = second * 60;
-const hour = minute * 60;
-const day = hour * 24;
+var second = 1000;
+var minute = second * 60;
+var hour = minute * 60;
+var day = hour * 24;
 
 
-const d = Math.floor(gap / (day));
-const h = Math.floor((gap % (day)) / (hour));
-const m = Math.floor((gap % (hour)) / (minute));
-const s = Math.floor((gap %  (minute)) / (second));
+var d = Math.floor(gap / (day));
+var h = Math.floor((gap % (day)) / (hour));
+var m = Math.floor((gap % (hour)) / (minute));
+var s = Math.floor((gap %  (minute)) / (second));
 document .getElementById('day').innerText = d;
 document.getElementById('hour').innerText = h;
 document .getElementById('minute').innerText = m;
 document.getElementById('second').innerText = s;
 }
 
-setInterval(function(){
+setInterval(()=>{
     newYear();
 },1000);
 
